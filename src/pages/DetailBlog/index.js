@@ -1,8 +1,11 @@
 import React from 'react';
 import { LoginBg } from '../../assets';
+import { Button } from '../../components';
 import './detailBlog.scss';
+import { useHistory } from 'react-router-dom';
 
 const DetailBlog = () => {
+  const history = useHistory();
   return (
     <div className="detail-blog-wrapper">
       <img className="img-cover" src={LoginBg} alt="thumb" />
@@ -15,6 +18,7 @@ const DetailBlog = () => {
         laboris id ex veniam laboris aliqua elit. Ut esse minim eiusmod magna
         magna et amet mollit dolore.
       </p>
+      <Button title="Kembali" onClick={() => history.push('/')} />
     </div>
   );
 };
